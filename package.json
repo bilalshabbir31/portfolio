@@ -1,0 +1,70 @@
+{
+  "name": "muhammad-bilal-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, responsive portfolio website showcasing my work as a Full-Stack Developer built with React, Vite, and Tailwind CSS",
+  "type": "module",
+  "private": true,
+  "author": {
+    "name": "Muhammad Bilal",
+    "email": "imbilal31@gmail.com",
+    "url": "https://github.com/bilalshabbir31"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bilalshabbir31/portfolio.git"
+  },
+  "homepage": "https://bilalshabbir31.github.io",
+  "keywords": [
+    "portfolio",
+    "react",
+    "vite",
+    "tailwindcss",
+    "full-stack-developer",
+    "web-developer",
+    "frontend",
+    "backend",
+    "responsive",
+    "modern-ui"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.22",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18",
+    "vite": "^7.2.4"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
