@@ -1,134 +1,123 @@
 const Projects = () => {
   const projects = [
     {
-      title: 'Save in Gold',
-      period: 'Jan 2025 - Nov 2025',
-      label: 'Save in Gold',
-      description: 'A comprehensive gold trading platform enabling users to purchase physical gold and trade online with real-time pricing. Built a full-stack admin panel and REST APIs for mobile app integration.',
-      tech: ['React.js', 'Node.js', 'Express.js', 'TypeScript', 'MongoDB', 'Mongoose', 'Redis', 'SSE', 'BullMQ', 'Tailwind CSS', 'AWS'],
+      title: 'Save in Gold - Gold Trading Platform',
+      period: 'Dec 2024 - Present',
+      description: 'A comprehensive gold trading platform enabling users to purchase physical gold and trade online with real-time pricing.',
       highlights: [
-        'Real-time gold price updates using Server-Sent Events (SSE)',
-        'Full-stack admin panel for managing users, transactions, and inventory',
-        'RESTful APIs for mobile app integration',
-        'Optimized database queries for improved performance',
-        'BullMQ queue for background processing jobs',
-        'Detailed reports of all user live transactions with export functionality',
-        'Complete transaction history tracking system',
-        'Comprehensive stats and analytics dashboard',
+        'Built high-performance admin dashboard using React.js and Tailwind CSS with responsive layouts and reusable UI components',
+        'Architected scalable backend services with Node.js and Express.js, implementing secure RESTful APIs with JWT authentication',
+        'Designed and integrated BullMQ queues for background jobs (transaction processing, email notifications, data synchronization)',
+        'Implemented real-time user activity tracking using Socket.IO for live admin monitoring dashboards',
+        'Optimized MongoDB performance achieving 45% faster dashboard load times through schema redesign and aggregation pipelines',
+        'Developed automated reports for gold trades, money transactions, and live transactions',
+        'Deployed and managed cloud infrastructure on AWS ensuring high availability and scalable performance',
       ],
+      tech: ['React.js', 'Node.js', 'Express.js', 'TypeScript', 'MongoDB', 'Mongoose', 'Redis', 'BullMQ', 'Socket.IO', 'Tailwind CSS', 'AWS'],
     },
     {
-      title: 'E-commerce Store',
-      period: 'Sep 2024 - Dec 2024',
-      label: 'Personal Project',
-      description: 'A microservices-based e-commerce platform built with 3 independent microservices. Features user-friendly product browsing, secure order placement, and comprehensive payment processing capabilities.',
-      tech: ['React.js', 'Express.js', 'gRPC', 'Kafka', 'Mongoose', 'MongoDB', 'Stripe API', 'Cloudinary', 'Redis'],
+      title: 'E-commerce Microservices System',
+      period: 'Oct 2024 - Dec 2024',
+      description: 'Scalable e-commerce platform using microservices architecture with independently deployed services.',
       highlights: [
-        '3 microservices architecture with gRPC communication',
-        'Event-driven architecture using Kafka for message queuing',
-        'Secure payment processing with Stripe',
-        'Admin panel for product and order management',
+        'Designed microservices architecture with Product, Order, and Auth services',
+        'Implemented PostgreSQL with Prisma ORM for efficient relational data management',
+        'Built event-driven workflow using Apache Kafka for reliable inter-service communication',
+        'Integrated robust order tracking system with event streams',
+        'Used gRPC for high-performance inter-service communication',
+        'Developed frontend using React for fast and user-friendly shopping experience',
       ],
+      tech: ['React.js', 'Node.js', 'Express.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Apache Kafka', 'gRPC', 'Redis'],
     },
     {
-      title: 'DMARCReport',
+      title: 'DMARCReport - Email Security Platform',
       period: 'Feb 2024 - Aug 2024',
-      label: 'Amrood Labs',
-      description: 'A web application that leverages DMARC, SPF, and DKIM protocols to protect domains from phishing, fraud, and impersonation. Developed by DuoCircle, this project serves a large user base with extensive reporting data.',
-      tech: ['PostgreSQL', 'Sidekiq', 'Sidekiq Cron', 'AWS EC2', 'Lambda', 'S3', 'Terraform', 'Zoho Billing', 'CanCan', 'ActiveAdmin', 'RSpec', 'RuboCop', 'Redis'],
+      description: 'Web application leveraging DMARC, SPF, and DKIM protocols to protect domains from phishing, fraud, and impersonation.',
       highlights: [
-        'DMARC, SPF, and DKIM protocol implementation',
-        'Large-scale user base with extensive reporting',
-        'AWS infrastructure with Terraform',
+        'Maintained platform serving large user base with extensive reporting data',
+        'Developed new features for domain protection and monitoring',
+        'Implemented DMARC, SPF, and DKIM protocol integrations',
+        'Built comprehensive reporting dashboards for security analytics',
+        'Managed AWS infrastructure with Terraform for scalability',
       ],
+      tech: ['PostgreSQL', 'Sidekiq', 'AWS EC2', 'Lambda', 'S3', 'Terraform', 'Zoho Billing', 'CanCan', 'ActiveAdmin', 'RSpec', 'Redis'],
     },
     {
-      title: 'BentPixels',
+      title: 'BentPixels - Big Data Analytics Platform',
       period: 'Jan 2023 - Jan 2024',
-      label: 'Amrood Labs',
-      description: 'Led the development of a project leveraging serverless big data technologies. The goal was to fetch 100+ million YouTube records monthly for each report. Optimized data ingestion into Redshift using S3, benefiting from scalability and cost-effectiveness.',
-      tech: ['Ruby on Rails', 'Ruby on Jets', 'PostgreSQL', 'AWS Redshift', 'S3', 'Lambda', 'ActiveAdmin', 'Swagger', 'Redis'],
+      description: 'Serverless big data solution processing 100+ million YouTube records monthly.',
       highlights: [
-        'Processed 100+ million records monthly',
-        'Serverless architecture with AWS Lambda',
-        'Power BI dashboard for data visualization',
+        'Led development leveraging Ruby on Jets, AWS Lambda, Redshift, and S3',
+        'Optimized data ingestion into Redshift using S3 for scalability and cost-effectiveness',
+        'Created optimized summaries enabling efficient querying and analysis',
+        'Developed intuitive Power BI dashboard for interactive data exploration',
+        'Delivered robust solution for large-scale data handling, processing, and visualization',
       ],
+      tech: ['Ruby on Rails', 'Ruby on Jets', 'PostgreSQL', 'AWS Redshift', 'S3', 'Lambda', 'ActiveAdmin', 'Swagger', 'Redis'],
     },
     {
-      title: 'Sludge Reducing Bacteria',
+      title: 'Sludge Reducing Bacteria - E-commerce Platform',
       period: 'Nov 2022 - Jan 2024',
-      label: 'Amrood Labs',
-      description: 'Designed and developed this platform from the ground up, delivering a proven solution for reducing sludge and optimizing wastewater treatment. Features an integrated e-commerce function and a custom-built dosage calculator.',
-      tech: ['Ruby on Rails', 'PostgreSQL', 'Tailwind CSS', 'Heroku', 'ActiveAdmin', 'SuckerPunch', 'SendGrid', 'WickedPdf', 'Hotwire', 'Turbo stream', 'Stimulus JS'],
+      description: 'Platform for wastewater treatment solutions with integrated e-commerce and dosage calculator.',
       highlights: [
-        'Custom dosage calculator with PDF generation',
-        'E-commerce integration for product purchasing',
-        'Built from ground up',
+        'Designed and developed platform from ground up for sludge reduction solutions',
+        'Built integrated e-commerce function for product purchasing',
+        'Created custom dosage calculator with PDF generation using WickedPdf',
+        'Implemented real-time updates using Hotwire and Turbo Stream',
+        'Deployed on Heroku with background job processing using SuckerPunch',
       ],
+      tech: ['Ruby on Rails', 'PostgreSQL', 'Tailwind CSS', 'Heroku', 'ActiveAdmin', 'SuckerPunch', 'SendGrid', 'WickedPdf', 'Hotwire', 'Turbo Stream', 'Stimulus JS'],
+    },
+    {
+      title: 'News API - Personal Project',
+      period: 'Sep 2024 - Oct 2024',
+      description: 'RESTful API with authentication, user management, and news CRUD operations.',
+      highlights: [
+        'Built Express.js API with user registration and authentication',
+        'Implemented news management system with full CRUD functionality',
+        'Integrated BullMQ for background processing',
+        'Used Prisma ORM for PostgreSQL database management',
+        'Added logging, caching, and rate limiting for performance and security',
+      ],
+      tech: ['Express.js', 'Node.js', 'Node Mailer', 'BullMQ', 'Redis', 'Prisma', 'PostgreSQL'],
     },
   ];
 
-  const getLabelColor = (label) => {
-    const colors = {
-      'Save in Gold': 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
-      'Amrood Labs': 'bg-purple-500/20 text-purple-400 border-purple-500/30',
-      'Personal Project': 'bg-blue-500/20 text-blue-400 border-blue-500/30',
-    };
-    return colors[label] || 'bg-gray-500/20 text-gray-400 border-gray-500/30';
-  };
-
   return (
-    <section id="projects" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">Projects</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
-        </div>
+    <section id="projects" className="py-16 px-6 bg-white">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">Projects</h2>
+        <p className="text-gray-600 mb-8">Key projects demonstrating full-stack development expertise</p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="space-y-8">
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="glass-effect rounded-2xl p-6 hover-lift animate-slide-up group"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="mb-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs text-blue-400 font-medium">{project.period}</span>
-                  {project.label && (
-                    <span className={`text-xs px-2 py-1 rounded border ${getLabelColor(project.label)}`}>
-                      {project.label}
-                    </span>
-                  )}
-                </div>
-                <h3 className="text-2xl font-bold text-gray-100 mt-2 mb-3 group-hover:text-blue-400 transition-colors">
-                  {project.title}
-                </h3>
+            <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm card-hover">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 md:mb-0">{project.title}</h3>
+                <span className="text-sm text-gray-500 whitespace-nowrap bg-blue-50 px-3 py-1 rounded-full">{project.period}</span>
               </div>
 
-              <p className="text-gray-400 text-sm mb-4 leading-relaxed">{project.description}</p>
+              <p className="text-gray-700 mb-4 leading-relaxed">{project.description}</p>
 
               <div className="mb-4">
-                <h4 className="text-sm font-semibold text-gray-300 mb-2">Highlights:</h4>
-                <ul className="space-y-1">
+                <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Highlights:</h4>
+                <ul className="space-y-1.5">
                   {project.highlights.map((highlight, idx) => (
-                    <li key={idx} className="text-xs text-gray-400 flex items-start">
-                      <span className="text-blue-400 mr-2 mt-1">•</span>
+                    <li key={idx} className="text-gray-700 text-sm flex items-start">
+                      <span className="mr-2 mt-1.5 w-1.5 h-1.5 bg-blue-600 rounded-full flex-shrink-0"></span>
                       <span>{highlight}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-gray-700">
-                <h4 className="text-sm font-semibold text-gray-300 mb-2">Technologies:</h4>
+              <div>
+                <h4 className="text-sm font-semibold text-gray-900 mb-2">Technologies:</h4>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-xs"
+                      className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-md border border-blue-100"
                     >
                       {tech}
                     </span>
