@@ -1,29 +1,80 @@
 const About = () => {
+  const features = [
+    {
+      icon: '🚀',
+      title: 'Professional Expertise',
+      description: 'Specialized in full-stack development with Node.js, Express.js, Ruby on Rails, and React.js. Expert in building RESTful APIs, GraphQL, microservices architecture, and deploying scalable applications on AWS and Heroku. Proficient in PostgreSQL and MongoDB for database management.',
+    },
+    {
+      icon: '💼',
+      title: 'Proven Track Record',
+      description: 'Successfully delivered projects ranging from gold trading platforms to email security solutions and big data analytics, consistently achieving significant performance improvements and business impact.',
+    },
+    {
+      icon: '⚡',
+      title: 'Technical Innovation',
+      description: 'Passionate about microservices architecture, real-time features with Socket.IO and SSE, serverless architectures with AWS Lambda, and optimizing database queries through strategic schema design, indexing, and aggregation pipelines.',
+    },
+  ];
+
+  const stats = [
+    { icon: '📅', value: '3+', label: 'Years Experience' },
+    { icon: '✅', value: '10+', label: 'Major Projects' },
+    { icon: '⚙️', value: '20+', label: 'Technologies' },
+  ];
+
   return (
     <section id="about" className="py-16 px-6 bg-white">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="section-title">About</h2>
-        <p className="section-subtitle">Professional background and expertise</p>
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-3 fade-in">About Me</h2>
+          <div className="w-16 h-1 bg-blue-600 mx-auto slide-up"></div>
+        </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-          <div className="space-y-4 text-gray-700 leading-relaxed">
-            <p>
-              I'm a Full-Stack Developer with 3 years of experience designing and building scalable, high-performance web applications. I specialize in both front-end and back-end development using technologies like Node.js, Express.js, Ruby on Rails, React.js, and AWS services.
-            </p>
-
-            <p>
-              I'm a strong problem-solver with expertise in developing full-stack SaaS applications, serverless big data solutions, RESTful APIs, microservices architecture, and deploying scalable applications on AWS and Heroku. My experience spans from building responsive user interfaces to architecting robust backend systems and optimizing database performance.
-            </p>
-
-            <div className="pt-6 border-t border-gray-200 mt-6 flex items-center gap-2">
-              <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <div>
-                <p className="text-gray-900 font-semibold">Dubai, United Arab Emirates</p>
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Left Column - Features */}
+          <div className="lg:col-span-2 space-y-6">
+            {/* Main Intro */}
+            <div className="slide-up">
+              <h3 className="text-2xl font-bold text-blue-600 mb-4 slide-up stagger-1">Crafting Digital Excellence</h3>
+              <div className="border-l-4 border-blue-600 pl-4 mb-6 slide-up stagger-2">
+                <p className="text-gray-700 leading-relaxed">
+                  A passionate Full Stack Developer with over 3 years of experience building scalable, high-performance web applications that drive business results. Currently based in Dubai, UAE, specializing in modern web technologies and cloud solutions.
+                </p>
               </div>
             </div>
+
+            {/* Feature Cards */}
+            <div className="space-y-4">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className={`bg-gray-50 border border-gray-200 rounded-lg p-5 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 slide-up stagger-${index + 1}`}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="text-4xl">{feature.icon}</div>
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h4>
+                      <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column - Stats */}
+          <div className="space-y-6">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className={`bg-white border-2 border-gray-200 rounded-lg p-6 text-center hover:border-blue-600 hover:scale-105 transition-all duration-300 slide-up stagger-${index + 2}`}
+              >
+                <div className="text-4xl mb-3">{stat.icon}</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.value}</div>
+                <div className="text-gray-600 text-sm font-medium">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
