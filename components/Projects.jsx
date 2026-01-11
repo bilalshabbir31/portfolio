@@ -7,13 +7,14 @@ const Projects = () => {
       highlights: [
         'Built high-performance admin dashboard using React.js and Tailwind CSS with responsive layouts and reusable UI components',
         'Architected scalable backend services with Node.js and Express.js, implementing secure RESTful APIs with JWT authentication',
+        'Implemented real-time gold price updates by fetching live prices from external bridge API and broadcasting to all connected clients using Server-Sent Events (SSE)',
         'Designed and integrated BullMQ queues for background jobs (transaction processing, email notifications, data synchronization)',
         'Implemented real-time user activity tracking using Socket.IO for live admin monitoring dashboards',
         'Optimized MongoDB performance achieving 45% faster dashboard load times through schema redesign and aggregation pipelines',
         'Developed automated reports for gold trades, money transactions, and live transactions',
         'Deployed and managed cloud infrastructure on AWS ensuring high availability and scalable performance',
       ],
-      tech: ['React.js', 'Node.js', 'Express.js', 'TypeScript', 'MongoDB', 'Mongoose', 'Redis', 'BullMQ', 'Socket.IO', 'Tailwind CSS', 'AWS'],
+      tech: ['React.js', 'Node.js', 'Express.js', 'TypeScript', 'MongoDB', 'Mongoose', 'Redis', 'BullMQ', 'Socket.IO', 'SSE', 'Tailwind CSS', 'AWS'],
     },
     {
       title: 'E-commerce Microservices System',
@@ -68,60 +69,50 @@ const Projects = () => {
       ],
       tech: ['Ruby on Rails', 'PostgreSQL', 'Tailwind CSS', 'Heroku', 'ActiveAdmin', 'SuckerPunch', 'SendGrid', 'WickedPdf', 'Hotwire', 'Turbo Stream', 'Stimulus JS'],
     },
-    {
-      title: 'News API - Personal Project',
-      period: 'Sep 2024 - Oct 2024',
-      description: 'RESTful API with authentication, user management, and news CRUD operations.',
-      highlights: [
-        'Built Express.js API with user registration and authentication',
-        'Implemented news management system with full CRUD functionality',
-        'Integrated BullMQ for background processing',
-        'Used Prisma ORM for PostgreSQL database management',
-        'Added logging, caching, and rate limiting for performance and security',
-      ],
-      tech: ['Express.js', 'Node.js', 'Node Mailer', 'BullMQ', 'Redis', 'Prisma', 'PostgreSQL'],
-    },
   ];
 
   return (
     <section id="projects" className="py-16 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Projects</h2>
-        <p className="text-gray-600 mb-8">Key projects demonstrating full-stack development expertise</p>
+        <h2 className="section-title fade-in">Projects</h2>
+        <p className="section-subtitle fade-in">Key projects demonstrating full-stack development expertise</p>
 
         <div className="space-y-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm card-hover">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 md:mb-0">{project.title}</h3>
-                <span className="text-sm text-gray-500 whitespace-nowrap bg-blue-50 px-3 py-1 rounded-full">{project.period}</span>
-              </div>
+            <div key={index} className={`bg-white border border-gray-200 rounded-lg p-6 shadow-sm card-hover relative overflow-hidden slide-up stagger-${Math.min(index + 1, 4)}`}>
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-50 to-transparent rounded-bl-full"></div>
+              <div className="relative z-10">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 md:mb-0">{project.title}</h3>
+                  <span className="text-sm text-gray-500 whitespace-nowrap bg-blue-50 px-3 py-1 rounded-full">{project.period}</span>
+                </div>
 
-              <p className="text-gray-700 mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-gray-700 mb-4 leading-relaxed">{project.description}</p>
 
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Highlights:</h4>
-                <ul className="space-y-1.5">
-                  {project.highlights.map((highlight, idx) => (
-                    <li key={idx} className="text-gray-700 text-sm flex items-start">
-                      <span className="mr-2 mt-1.5 w-1.5 h-1.5 bg-blue-600 rounded-full flex-shrink-0"></span>
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Highlights:</h4>
+                  <ul className="space-y-1.5">
+                    {project.highlights.map((highlight, idx) => (
+                      <li key={idx} className="text-gray-700 text-sm flex items-start">
+                        <span className="mr-2 mt-1.5 w-1.5 h-1.5 bg-blue-600 rounded-full flex-shrink-0"></span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-              <div>
-                <h4 className="text-sm font-semibold text-gray-900 mb-2">Technologies:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-md border border-blue-100"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                <div>
+                  <h4 className="text-sm font-semibold text-gray-900 mb-2">Technologies:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-md border border-blue-100"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

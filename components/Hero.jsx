@@ -2,17 +2,17 @@ const Hero = () => {
   return (
     <section id="home" className="pt-32 pb-20 px-6 bg-gradient-to-br from-blue-50 to-white">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 slide-up">
           Muhammad Bilal
         </h1>
-        <h2 className="text-2xl md:text-3xl text-blue-600 mb-6">
+        <h2 className="text-2xl md:text-3xl text-blue-600 mb-6 slide-up stagger-1">
           Software Engineer
         </h2>
-        <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl">
-          Full-Stack Developer with 3 years of experience designing and building scalable, high-performance web applications using technologies like Node.js, Express.js, Ruby on Rails, and AWS services. Proficient in front-end development with React.js and skilled in deploying serverless solutions.
+        <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl slide-up stagger-2">
+          Full-Stack Developer with 3 years of experience designing and building scalable, high-performance web applications using technologies like Node.js, Express.js, Ruby on Rails, and AWS services. I transform complex technical challenges into elegant solutions—from architecting microservices to optimizing databases—with a focus on performance, maintainability, and exceptional user experience.
         </p>
 
-        <div className="flex flex-wrap gap-4 mb-8">
+        <div className="flex flex-wrap gap-4 mb-8 slide-up stagger-3">
           <a
             href="#contact"
             className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
@@ -25,9 +25,19 @@ const Hero = () => {
           >
             View Projects
           </a>
+          <a
+            href="/Muhammad_Bilal_CV.pdf"
+            download="Muhammad_Bilal_CV.pdf"
+            className="px-6 py-3 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-900 transition-colors shadow-md hover:shadow-lg flex items-center gap-2"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download CV
+          </a>
         </div>
 
-        <div className="flex gap-4 text-sm text-gray-600">
+        <div className="flex gap-4 text-sm text-gray-600 slide-up stagger-4">
           <a href="mailto:imbilal31@gmail.com" className="hover:text-blue-600 transition-colors flex items-center gap-1">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             Email

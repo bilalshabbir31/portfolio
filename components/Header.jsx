@@ -29,7 +29,7 @@ const Header = () => {
         </a>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <a
               key={link.name}

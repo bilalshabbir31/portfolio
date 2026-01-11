@@ -45,8 +45,8 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16 px-6 bg-gray-50">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Contact</h2>
-        <p className="text-gray-600 mb-8">Let's connect and discuss opportunities</p>
+        <h2 className="section-title">Contact</h2>
+        <p className="section-subtitle">Let's connect and discuss opportunities</p>
 
         <div className="grid md:grid-cols-2 gap-4 mb-6">
           {contactInfo.map((info, index) => (
@@ -68,10 +68,20 @@ const Contact = () => {
           ))}
         </div>
 
-        <div className="p-6 bg-blue-50 rounded-lg border border-blue-100">
-          <p className="text-gray-700">
+        <div className="mt-8 p-6 bg-blue-50 rounded-lg border border-blue-100">
+          <p className="text-gray-700 mb-4">
             <span className="font-semibold text-gray-900">Currently available in the UAE for immediate joining.</span> Feel free to reach out if you'd like to discuss opportunities or collaborate on projects.
           </p>
+          <a
+            href="/Muhammad_Bilal_CV.pdf"
+            download="Muhammad_Bilal_CV.pdf"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download My CV
+          </a>
         </div>
       </div>
     </section>

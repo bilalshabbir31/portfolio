@@ -32,26 +32,29 @@ const Experience = () => {
   return (
     <section id="experience" className="py-16 px-6 bg-gray-50">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Experience</h2>
-        <p className="text-gray-600 mb-8">Professional software engineering experience</p>
+        <h2 className="section-title fade-in">Experience</h2>
+        <p className="section-subtitle fade-in">Professional software engineering experience</p>
 
         <div className="space-y-12">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-white border-l-4 border-blue-600 pl-6 pr-6 py-6 rounded-r-lg shadow-sm card-hover">
-              <div className="mb-4">
-                <h3 className="text-xl font-bold text-gray-900">{exp.position}</h3>
-                <p className="text-lg text-blue-600 font-medium">{exp.company}</p>
-                <p className="text-sm text-gray-600">{exp.location} • {exp.period}</p>
-              </div>
+            <div key={index} className={`bg-white border-l-4 border-blue-600 pl-6 pr-6 py-6 rounded-r-lg shadow-sm card-hover relative overflow-hidden slide-up ${index === 0 ? 'stagger-1' : 'stagger-2'}`}>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-50 to-transparent rounded-bl-full opacity-50"></div>
+              <div className="relative z-10">
+                <div className="mb-4">
+                  <h3 className="text-xl font-bold text-gray-900">{exp.position}</h3>
+                  <p className="text-lg text-blue-600 font-medium">{exp.company}</p>
+                  <p className="text-sm text-gray-600">{exp.location} • {exp.period}</p>
+                </div>
 
-              <ul className="space-y-2">
-                {exp.achievements.map((achievement, idx) => (
-                  <li key={idx} className="text-gray-700 flex items-start">
-                    <span className="mr-2 mt-2 w-1.5 h-1.5 bg-blue-600 rounded-full flex-shrink-0"></span>
-                    <span>{achievement}</span>
-                  </li>
-                ))}
-              </ul>
+                <ul className="space-y-2">
+                  {exp.achievements.map((achievement, idx) => (
+                    <li key={idx} className="text-gray-700 flex items-start">
+                      <span className="mr-2 mt-2 w-1.5 h-1.5 bg-blue-600 rounded-full flex-shrink-0"></span>
+                      <span>{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>

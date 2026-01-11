@@ -2,8 +2,8 @@ const Education = () => {
   return (
     <section id="education" className="py-16 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Education</h2>
-        <p className="text-gray-600 mb-8">Academic background and qualifications</p>
+        <h2 className="section-title">Education</h2>
+        <p className="section-subtitle">Academic background and qualifications</p>
 
         <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm card-hover">
           <div className="mb-4">

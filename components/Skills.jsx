@@ -35,12 +35,12 @@ const Skills = () => {
   return (
     <section id="skills" className="py-16 px-6 bg-gray-50">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Technical Skills</h2>
-        <p className="text-gray-600 mb-8">Technologies and tools I work with</p>
+        <h2 className="section-title fade-in">Technical Skills</h2>
+        <p className="section-subtitle fade-in">Technologies and tools I work with</p>
 
         <div className="grid md:grid-cols-2 gap-6">
           {skillCategories.map((category, index) => (
-            <div key={index} className="bg-white border border-gray-200 rounded-lg p-5 shadow-sm card-hover">
+            <div key={index} className={`bg-white border border-gray-200 rounded-lg p-5 shadow-sm card-hover slide-up stagger-${Math.min(index + 1, 4)}`}>
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-2xl">{category.icon}</span>
                 <h3 className="text-lg font-bold text-gray-900">{category.category}</h3>
