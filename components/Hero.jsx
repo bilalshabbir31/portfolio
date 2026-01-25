@@ -28,6 +28,8 @@ const Hero = () => {
           <a
             href="/Muhammad_Bilal_CV.pdf"
             download="Muhammad_Bilal_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-3 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-900 transition-colors shadow-md hover:shadow-lg flex items-center gap-2"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

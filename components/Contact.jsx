@@ -75,6 +75,8 @@ const Contact = () => {
           <a
             href="/Muhammad_Bilal_CV.pdf"
             download="Muhammad_Bilal_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
