@@ -9,7 +9,7 @@ const Hero = () => {
           Software Engineer
         </h2>
         <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl slide-up stagger-2">
-          Full-Stack Developer with 3 years of experience designing and building scalable, high-performance web applications using technologies like Node.js, Express.js, Ruby on Rails, and AWS services. I transform complex technical challenges into elegant solutions—from architecting microservices to optimizing databases—with a focus on performance, maintainability, and exceptional user experience.
+          Full-Stack Developer with 3 years of experience designing and building scalable, high-performance web applications using technologies like Node.js, Express.js, Golang, Ruby on Rails, and AWS services. I transform complex technical challenges into elegant solutions—from architecting microservices to optimizing databases—with a focus on performance, maintainability, and exceptional user experience.
         </p>
 
         <div className="flex flex-wrap gap-4 mb-8 slide-up stagger-3">

@@ -2,27 +2,27 @@ const Skills = () => {
   const skillCategories = [
     {
       category: 'Languages',
-      skills: ['TypeScript', 'JavaScript', 'Ruby', 'Java', 'Python', 'Golang', 'C++'],
+      skills: ['TypeScript', 'JavaScript', 'Golang', 'Ruby', 'Python', 'Java', 'C++'],
       icon: '💻',
     },
     {
       category: 'Frontend',
-      skills: ['React.js', 'Tailwind CSS', 'Stimulus JS', 'Hotwire', 'Turbo Rails'],
+      skills: ['React.js', 'Redux', 'Zustand', 'RTK Query', 'Tailwind CSS', 'Stimulus JS', 'Hotwire', 'Turbo Rails'],
       icon: '🎨',
     },
     {
       category: 'Backend',
-      skills: ['Node.js', 'Express.js', 'Ruby on Rails', 'RESTful APIs', 'GraphQL'],
+      skills: ['Node.js', 'Express.js', 'Ruby on Rails', 'RESTful APIs', 'GraphQL', 'gRPC'],
       icon: '⚙️',
     },
     {
       category: 'Databases',
-      skills: ['PostgreSQL', 'MongoDB', 'Mongoose', 'Prisma', 'MSSQL', 'MySQL', 'Redis'],
+      skills: ['PostgreSQL', 'MongoDB', 'Mongoose', 'Prisma', 'MSSQL', 'MySQL', 'Redis', 'Kafka'],
       icon: '🗄️',
     },
     {
       category: 'Cloud & DevOps',
-      skills: ['AWS', 'Docker', 'Terraform', 'Lambda', 'S3', 'EC2', 'Heroku'],
+      skills: ['AWS', 'Docker', 'CI/CD', 'GitHub Actions', 'GitLab CI', 'Jenkins', 'Terraform', 'Lambda', 'S3', 'EC2', 'Heroku', 'Vercel', 'Ansible'],
       icon: '☁️',
     },
     {
