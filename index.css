@@ -58,6 +58,14 @@
   .stagger-4 {
     animation-delay: 0.4s;
   }
+
+  .stagger-5 {
+    animation-delay: 0.5s;
+  }
+
+  .floating-icon {
+    animation: float 6s ease-in-out infinite;
+  }
 }
 
 /* Keyframe Animations */
@@ -104,5 +112,17 @@
 
   50% {
     opacity: 0.8;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
   }
 }
