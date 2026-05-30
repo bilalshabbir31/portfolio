@@ -14,22 +14,23 @@
   }
 
   ::selection {
-    @apply bg-violet-200 text-violet-900;
+    @apply bg-violet-500/40 text-violet-100;
   }
 }
 
 @layer components {
   .surface-card {
-    @apply bg-white border border-stone-200/80 rounded-2xl shadow-sm shadow-stone-200/50;
+    @apply bg-zinc-900/70 backdrop-blur-sm border border-zinc-800/80 rounded-2xl
+      shadow-lg shadow-black/20;
   }
 
   .surface-card-hover {
     @apply surface-card transition-all duration-300
-      hover:shadow-xl hover:shadow-violet-100/60 hover:border-violet-200 hover:-translate-y-1.5;
+      hover:shadow-xl hover:shadow-violet-500/10 hover:border-violet-500/30 hover:-translate-y-1.5;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-violet-600 via-violet-500 to-rose-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-violet-400 via-violet-300 to-rose-400 bg-clip-text text-transparent;
   }
 
   .section-padding {
@@ -41,11 +42,11 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-ink mb-2;
+    @apply text-3xl md:text-4xl font-bold text-zinc-50 mb-2;
   }
 
   .section-subtitle {
-    @apply text-muted mb-10;
+    @apply text-zinc-400 mb-10;
   }
 
   .accent-bar {
@@ -55,33 +56,46 @@
   .btn-primary {
     @apply px-6 py-3 bg-gradient-to-r from-violet-600 to-violet-500 text-white font-medium rounded-xl
       hover:from-violet-500 hover:to-violet-400 transition-all duration-300
-      shadow-lg shadow-violet-300/40 hover:shadow-violet-400/50 hover:scale-105;
+      shadow-lg shadow-violet-600/30 hover:shadow-violet-500/40 hover:scale-105;
   }
 
   .btn-outline {
-    @apply px-6 py-3 border-2 border-violet-300 text-violet-700 font-medium rounded-xl
-      hover:bg-violet-50 hover:border-violet-400 transition-all duration-300 hover:scale-105;
+    @apply px-6 py-3 border-2 border-violet-500/50 text-violet-300 font-medium rounded-xl
+      hover:bg-violet-500/10 hover:border-violet-400 transition-all duration-300 hover:scale-105;
   }
 
   .tech-badge {
-    @apply px-3 py-1.5 bg-violet-50 text-violet-700 text-sm rounded-lg border border-violet-100
-      font-medium transition-all duration-300 hover:bg-violet-100 hover:border-violet-300 hover:scale-105;
+    @apply px-3 py-1.5 bg-violet-500/10 text-violet-300 text-sm rounded-lg border border-violet-500/20
+      font-medium transition-all duration-300 hover:bg-violet-500/20 hover:border-violet-400/40 hover:scale-105;
   }
 
   .float-icon-card {
-    @apply bg-white border border-stone-200 shadow-lg shadow-stone-300/40
-      hover:shadow-violet-200/60 hover:scale-110 transition-transform duration-300;
+    @apply bg-zinc-900/90 border border-zinc-700/80 shadow-lg shadow-black/40
+      hover:shadow-violet-500/20 hover:border-violet-500/30 hover:scale-110 transition-transform duration-300;
   }
 
   .section-alt {
-    @apply bg-white/70;
+    @apply bg-zinc-900/40;
   }
 
   .hero-mesh {
     background-image:
-      radial-gradient(ellipse 80% 60% at 10% 20%, rgba(139, 92, 246, 0.12) 0%, transparent 55%),
-      radial-gradient(ellipse 70% 50% at 90% 10%, rgba(244, 63, 94, 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse 60% 40% at 50% 90%, rgba(251, 191, 36, 0.1) 0%, transparent 50%);
+      radial-gradient(ellipse 80% 60% at 10% 20%, rgba(139, 92, 246, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse 70% 50% at 90% 10%, rgba(244, 63, 94, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 40% at 50% 90%, rgba(124, 58, 237, 0.08) 0%, transparent 50%);
+  }
+
+  .period-badge {
+    @apply text-sm text-violet-300 whitespace-nowrap bg-violet-500/15 px-3 py-1 rounded-full
+      border border-violet-500/25 font-medium;
+  }
+
+  .highlight-box {
+    @apply p-4 bg-violet-500/10 rounded-xl border border-violet-500/20;
+  }
+
+  .card-glow {
+    @apply absolute top-0 right-0 w-36 h-36 bg-gradient-to-br from-violet-500/15 to-transparent rounded-bl-full;
   }
 }
 
@@ -101,7 +115,6 @@
     animation: float 5s ease-in-out infinite;
   }
 
-  /* Basic reveal */
   .reveal {
     opacity: 0;
     transform: translateY(28px);
@@ -113,7 +126,6 @@
     transform: translateY(0);
   }
 
-  /* Scale bounce */
   .reveal-scale {
     opacity: 0;
     transform: scale(0.88) translateY(24px);
@@ -125,7 +137,6 @@
     transform: scale(1) translateY(0);
   }
 
-  /* Slide from sides */
   .reveal-left {
     opacity: 0;
     transform: translateX(-48px);
@@ -148,7 +159,6 @@
     transform: translateX(0);
   }
 
-  /* Flip card entrance */
   .reveal-flip {
     opacity: 0;
     transform: perspective(800px) rotateX(12deg) translateY(30px);
@@ -160,7 +170,6 @@
     transform: perspective(800px) rotateX(0) translateY(0);
   }
 
-  /* Stagger children (projects, skill cards) */
   .stagger-item {
     opacity: 0;
     transform: translateY(40px) scale(0.94);
@@ -172,7 +181,6 @@
     transform: translateY(0) scale(1);
   }
 
-  /* Skill / tech badge pop */
   .badge-pop-item {
     opacity: 0;
     transform: scale(0.6);

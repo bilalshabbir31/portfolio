@@ -60,18 +60,18 @@ const Contact = () => {
               rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               className="stagger-item surface-card-hover p-4 flex items-center gap-3"
             >
-              <div className="text-violet-600">{info.icon}</div>
+              <div className="text-violet-400">{info.icon}</div>
               <div>
-                <p className="text-sm text-stone-500 mb-0.5">{info.label}</p>
-                <p className="text-ink font-medium">{info.value}</p>
+                <p className="text-sm text-zinc-500 mb-0.5">{info.label}</p>
+                <p className="text-zinc-100 font-medium">{info.value}</p>
               </div>
             </a>
           ))}
         </div>
 
-        <div className="mt-8 p-6 surface-card border-violet-200 reveal-flip">
-          <p className="text-muted mb-4">
-            <span className="font-semibold text-ink">Currently available in the UAE for immediate joining.</span>{' '}
+        <div className="mt-8 p-6 surface-card border-violet-500/20 reveal-flip">
+          <p className="text-zinc-400 mb-4">
+            <span className="font-semibold text-zinc-100">Currently available in the UAE for immediate joining.</span>{' '}
             Feel free to reach out if you&apos;d like to discuss opportunities or collaborate on projects.
           </p>
           <a

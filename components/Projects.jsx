@@ -105,23 +105,21 @@ const Projects = () => {
               className="stagger-item surface-card-hover p-6 md:p-8 relative overflow-hidden"
               data-stagger-badges="true"
             >
-              <div className="absolute top-0 right-0 w-36 h-36 bg-gradient-to-br from-violet-100 to-transparent rounded-bl-full" />
+              <div className="card-glow" />
               <div className="relative z-10">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3 gap-2">
-                  <h3 className="text-xl font-bold text-ink">{project.title}</h3>
-                  <span className="text-sm text-violet-700 whitespace-nowrap bg-violet-50 px-3 py-1 rounded-full border border-violet-200 font-medium">
-                    {project.period}
-                  </span>
+                  <h3 className="text-xl font-bold text-zinc-50">{project.title}</h3>
+                  <span className="period-badge">{project.period}</span>
                 </div>
 
-                <p className="text-muted mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-zinc-400 mb-4 leading-relaxed">{project.description}</p>
 
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-ink mb-2">Key Highlights</h4>
+                  <h4 className="text-sm font-semibold text-zinc-200 mb-2">Key Highlights</h4>
                   <ul className="space-y-1.5">
                     {project.highlights.map((highlight, idx) => (
-                      <li key={idx} className="text-muted text-sm flex items-start">
-                        <span className="mr-2 mt-1.5 w-1.5 h-1.5 bg-violet-500 rounded-full flex-shrink-0" />
+                      <li key={idx} className="text-zinc-400 text-sm flex items-start">
+                        <span className="mr-2 mt-1.5 w-1.5 h-1.5 bg-violet-400 rounded-full flex-shrink-0" />
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -129,7 +127,7 @@ const Projects = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-semibold text-ink mb-2">Technologies</h4>
+                  <h4 className="text-sm font-semibold text-zinc-200 mb-2">Technologies</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, idx) => (
                       <span key={idx} className="tech-badge badge-pop-item">

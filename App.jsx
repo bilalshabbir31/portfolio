@@ -15,6 +15,8 @@ function App() {
   return (
     <div className="min-h-screen bg-cream text-ink relative overflow-x-hidden">
       <div className="fixed inset-0 hero-mesh pointer-events-none z-0" />
+      <div className="fixed top-0 left-1/4 w-96 h-96 bg-violet-600/10 rounded-full blur-3xl animate-glow pointer-events-none z-0" />
+      <div className="fixed bottom-1/4 right-1/4 w-80 h-80 bg-rose-600/10 rounded-full blur-3xl animate-glow pointer-events-none z-0" style={{ animationDelay: '2s' }} />
 
       <div className="relative z-10">
         <Header />

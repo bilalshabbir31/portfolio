@@ -38,8 +38,8 @@ const About = () => {
           <div className="lg:col-span-2 space-y-6">
             <div className="reveal-left">
               <h3 className="text-2xl font-bold gradient-text mb-4">Crafting Digital Excellence</h3>
-              <div className="border-l-4 border-violet-400 pl-4 mb-6">
-                <p className="text-muted leading-relaxed">
+              <div className="border-l-4 border-violet-500 pl-4 mb-6">
+                <p className="text-zinc-400 leading-relaxed">
                   A passionate Full Stack Developer with over 3 years of experience building scalable, high-performance web applications that drive business results. Currently based in Dubai, UAE, specializing in modern web technologies, fintech systems, and cloud solutions.
                 </p>
               </div>
@@ -51,8 +51,8 @@ const About = () => {
                   <div className="flex items-start gap-4">
                     <div className="text-4xl">{feature.icon}</div>
                     <div>
-                      <h4 className="text-lg font-bold text-ink mb-2">{feature.title}</h4>
-                      <p className="text-muted text-sm leading-relaxed">{feature.description}</p>
+                      <h4 className="text-lg font-bold text-zinc-100 mb-2">{feature.title}</h4>
+                      <p className="text-zinc-400 text-sm leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
                 </div>
@@ -65,7 +65,7 @@ const About = () => {
               <div key={index} className="stagger-item surface-card-hover p-6 text-center">
                 <div className="text-4xl mb-3">{stat.icon}</div>
                 <div className="text-4xl font-bold gradient-text mb-2">{stat.value}</div>
-                <div className="text-muted text-sm font-medium">{stat.label}</div>
+                <div className="text-zinc-400 text-sm font-medium">{stat.label}</div>
               </div>
             ))}
           </div>

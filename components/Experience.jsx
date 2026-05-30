@@ -47,20 +47,20 @@ const Experience = () => {
               key={index}
               className="stagger-item surface-card-hover pl-6 pr-6 py-6 border-l-4 border-l-violet-500 relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-violet-50 to-transparent rounded-bl-full" />
+              <div className="card-glow" />
               <div className="relative z-10">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-ink">{exp.position}</h3>
-                  <p className="text-lg text-violet-600 font-medium">{exp.company}</p>
-                  <p className="text-sm text-stone-500">
+                  <h3 className="text-xl font-bold text-zinc-50">{exp.position}</h3>
+                  <p className="text-lg text-violet-400 font-medium">{exp.company}</p>
+                  <p className="text-sm text-zinc-500">
                     {exp.location} • {exp.period}
                   </p>
                 </div>
 
                 <ul className="space-y-2">
                   {exp.achievements.map((achievement, idx) => (
-                    <li key={idx} className="text-muted flex items-start text-sm leading-relaxed">
-                      <span className="mr-2 mt-2 w-1.5 h-1.5 bg-violet-500 rounded-full flex-shrink-0" />
+                    <li key={idx} className="text-zinc-400 flex items-start text-sm leading-relaxed">
+                      <span className="mr-2 mt-2 w-1.5 h-1.5 bg-violet-400 rounded-full flex-shrink-0" />
                       <span>{achievement}</span>
                     </li>
                   ))}

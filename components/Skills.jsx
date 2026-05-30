@@ -55,7 +55,7 @@ const Skills = () => {
             >
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-2xl">{category.icon}</span>
-                <h3 className="text-lg font-bold text-ink">{category.category}</h3>
+                <h3 className="text-lg font-bold text-zinc-100">{category.category}</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, idx) => (

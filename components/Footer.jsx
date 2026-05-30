@@ -1,11 +1,11 @@
 const Footer = () => {
   return (
-    <footer className="border-t border-stone-200 py-8 px-6 bg-white/80">
+    <footer className="border-t border-zinc-800 py-8 px-6 bg-zinc-950/80">
       <div className="max-w-4xl mx-auto text-center">
-        <p className="text-stone-500 text-sm">
+        <p className="text-zinc-500 text-sm">
           © {new Date().getFullYear()} Muhammad Bilal. All rights reserved.
         </p>
-        <p className="text-stone-400 text-xs mt-2">Built with React, Vite & Tailwind CSS</p>
+        <p className="text-zinc-600 text-xs mt-2">Built with React, Vite & Tailwind CSS</p>
       </div>
     </footer>
   );

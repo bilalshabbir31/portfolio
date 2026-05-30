@@ -23,7 +23,7 @@ const Header = () => {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/90 backdrop-blur-xl border-b border-stone-200 shadow-sm'
+          ? 'bg-zinc-950/85 backdrop-blur-xl border-b border-zinc-800 shadow-lg shadow-black/20'
           : 'bg-transparent'
       }`}
     >
@@ -37,7 +37,7 @@ const Header = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-stone-600 hover:text-violet-600 transition-colors text-sm font-medium relative group"
+              className="text-zinc-400 hover:text-violet-400 transition-colors text-sm font-medium relative group"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-rose-400 transition-all group-hover:w-full" />
@@ -46,7 +46,7 @@ const Header = () => {
         </nav>
 
         <button
-          className="md:hidden text-stone-600 hover:text-violet-600 transition-colors"
+          className="md:hidden text-zinc-400 hover:text-violet-400 transition-colors"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -66,7 +66,7 @@ const Header = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="px-6 py-3 text-stone-600 hover:text-violet-600 hover:bg-violet-50 transition-colors"
+                  className="px-6 py-3 text-zinc-400 hover:text-violet-400 hover:bg-violet-500/10 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}

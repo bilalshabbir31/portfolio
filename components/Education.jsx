@@ -10,21 +10,21 @@ const Education = () => {
 
         <div className="surface-card-hover p-6 md:p-8 reveal-flip">
           <div className="mb-4">
-            <h3 className="text-xl font-bold text-ink">University of Management And Technology</h3>
-            <p className="text-lg text-violet-600 font-medium">BS in Computer Science</p>
-            <p className="text-sm text-stone-500">Sept 2018 - Nov 2022 • GPA: 3.33/4.0</p>
+            <h3 className="text-xl font-bold text-zinc-50">University of Management And Technology</h3>
+            <p className="text-lg text-violet-400 font-medium">BS in Computer Science</p>
+            <p className="text-sm text-zinc-500">Sept 2018 - Nov 2022 • GPA: 3.33/4.0</p>
           </div>
 
-          <div className="mb-4 p-4 bg-violet-50 rounded-xl border border-violet-100">
-            <h4 className="font-semibold text-ink mb-2">Final Year Project</h4>
-            <p className="text-stone-700 mb-2 font-medium">Pakistan Sign Language using Deep Learning Model</p>
-            <p className="text-muted text-sm">
+          <div className="mb-4 highlight-box">
+            <h4 className="font-semibold text-zinc-100 mb-2">Final Year Project</h4>
+            <p className="text-zinc-300 mb-2 font-medium">Pakistan Sign Language using Deep Learning Model</p>
+            <p className="text-zinc-400 text-sm">
               A research project using Deep Learning models to solve text translation problems of English to Pakistan sign language and Pakistan sign language to English. The deep learning models covered include LSTM, BILSTM, GRU, BIGRU, and Attention Mechanisms.
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-ink mb-2">Coursework</h4>
+            <h4 className="font-semibold text-zinc-100 mb-2">Coursework</h4>
             <div className="flex flex-wrap gap-2">
               {['Machine Learning', 'Deep Learning', 'Cloud Computing'].map((course, idx) => (
                 <span key={idx} className="tech-badge">
