@@ -11,9 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bilalshabbir31/Portfolio.git"
+    "url": "https://github.com/bilalshabbir31/portfolio.git"
   },
-  "homepage": "https://bilalshabbir31.github.io/Portfolio/",
+  "homepage": "https://bilalshabbir31.github.io/portfolio/",
   "keywords": [
     "portfolio",
     "react",
