@@ -73,7 +73,7 @@ const Contact = () => {
             <span className="font-semibold text-gray-900">Currently available in the UAE for immediate joining.</span> Feel free to reach out if you'd like to discuss opportunities or collaborate on projects.
           </p>
           <a
-            href="/Muhammad_Bilal_CV.pdf"
+            href={`${import.meta.env.BASE_URL}Muhammad_Bilal_CV.pdf`}
             download="Muhammad_Bilal_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"

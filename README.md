@@ -9,7 +9,7 @@
 
 **A modern, responsive portfolio website showcasing my work as a Full-Stack Developer**
 
-[Live Demo](#) • [Features](#-features) • [Tech Stack](#-tech-stack) • [Installation](#-installation)
+[Live Demo](https://bilalshabbir31.github.io/Portfolio/) • [Features](#-features) • [Tech Stack](#-tech-stack) • [Installation](#-installation)
 
 </div>
 
@@ -60,8 +60,8 @@ npm --version   # Should be v9 or higher
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/bilalshabbir31/portfolio.git
-   cd portfolio
+   git clone https://github.com/bilalshabbir31/Portfolio.git
+   cd Portfolio
    ```
 
 2. **Install dependencies**
@@ -192,6 +192,16 @@ Vite configuration includes optimized file watching to prevent system limits. Ad
 - Build options
 - Server configuration
 - Plugin settings
+
+## 🌐 Deployment (GitHub Pages)
+
+This site deploys automatically to GitHub Pages when you push to `main`.
+
+1. On GitHub, open **Settings → Pages**
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. Push to `main` (or run the **Deploy to GitHub Pages** workflow manually)
+
+Live site: [https://bilalshabbir31.github.io/Portfolio/](https://bilalshabbir31.github.io/Portfolio/)
 
 ## 📈 Performance
 

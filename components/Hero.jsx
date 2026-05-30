@@ -87,7 +87,7 @@ const Hero = () => {
             View Projects
           </a>
           <a
-            href="/Muhammad_Bilal_CV.pdf"
+            href={`${import.meta.env.BASE_URL}Muhammad_Bilal_CV.pdf`}
             download="Muhammad_Bilal_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
