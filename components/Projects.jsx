@@ -1,20 +1,38 @@
 const Projects = () => {
   const projects = [
     {
-      title: 'Save in Gold - Gold Trading Platform',
+      title: 'Save in Gold — Fintech Trading Platform',
       period: 'Dec 2024 - Present',
-      description: 'A comprehensive gold trading platform enabling users to purchase physical gold and trade online with real-time pricing.',
+      description:
+        'A fintech platform enabling users to buy, sell, and manage precious metals online with real-time market data and secure payment processing.',
       highlights: [
         'Built high-performance admin dashboard using React.js and Tailwind CSS with responsive layouts and reusable UI components',
         'Architected scalable backend services with Node.js and Express.js, implementing secure RESTful APIs with JWT authentication',
-        'Implemented real-time gold price updates by fetching live prices from external bridge API and broadcasting to all connected clients using Server-Sent Events (SSE)',
+        'Implemented real-time market rate updates by fetching live data from external bridge API and broadcasting to all connected clients via WebSocket',
+        'Integrated FIX protocol parser for institutional-grade market data ingestion and order flow processing',
         'Designed and integrated BullMQ queues for background jobs (transaction processing, email notifications, data synchronization)',
         'Implemented real-time user activity tracking using Socket.IO for live admin monitoring dashboards',
+        'Integrated Stripe for secure payment processing and transaction management',
         'Optimized MongoDB performance achieving 45% faster dashboard load times through schema redesign and aggregation pipelines',
-        'Developed automated reports for gold trades, money transactions, and live transactions',
+        'Developed automated reports for trades, money transactions, and live transaction monitoring',
         'Deployed and managed cloud infrastructure on AWS ensuring high availability and scalable performance',
       ],
-      tech: ['React.js', 'Node.js', 'Express.js', 'TypeScript', 'MongoDB', 'Mongoose', 'Redis', 'BullMQ', 'Socket.IO', 'SSE', 'Tailwind CSS', 'AWS'],
+      tech: [
+        'React.js',
+        'Node.js',
+        'Express.js',
+        'TypeScript',
+        'MongoDB',
+        'Redis',
+        'BullMQ',
+        'WebSocket',
+        'Socket.IO',
+        'FIX Parser',
+        'Stripe',
+        'Fintech',
+        'Tailwind CSS',
+        'AWS',
+      ],
     },
     {
       title: 'E-commerce Microservices System',
@@ -72,29 +90,38 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-16 px-6 bg-white">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="section-title fade-in">Projects</h2>
-        <p className="section-subtitle fade-in">Key projects demonstrating full-stack development expertise</p>
+    <section id="projects" className="section-padding">
+      <div className="container-custom">
+        <div className="text-center mb-12 reveal">
+          <h2 className="section-title">Projects</h2>
+          <div className="accent-bar mb-4" />
+          <p className="section-subtitle mb-0">Key projects demonstrating full-stack development expertise</p>
+        </div>
 
         <div className="space-y-8">
           {projects.map((project, index) => (
-            <div key={index} className={`bg-white border border-gray-200 rounded-lg p-6 shadow-sm card-hover relative overflow-hidden slide-up stagger-${Math.min(index + 1, 4)}`}>
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-50 to-transparent rounded-bl-full"></div>
+            <div
+              key={index}
+              className="glass-card-hover p-6 md:p-8 relative overflow-hidden reveal"
+              style={{ transitionDelay: `${index * 0.08}s` }}
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-bl-full" />
               <div className="relative z-10">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 md:mb-0">{project.title}</h3>
-                  <span className="text-sm text-gray-500 whitespace-nowrap bg-blue-50 px-3 py-1 rounded-full">{project.period}</span>
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3 gap-2">
+                  <h3 className="text-xl font-bold text-slate-100">{project.title}</h3>
+                  <span className="text-sm text-cyan-400 whitespace-nowrap bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">
+                    {project.period}
+                  </span>
                 </div>
 
-                <p className="text-gray-700 mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-slate-400 mb-4 leading-relaxed">{project.description}</p>
 
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Highlights:</h4>
+                  <h4 className="text-sm font-semibold text-slate-200 mb-2">Key Highlights</h4>
                   <ul className="space-y-1.5">
                     {project.highlights.map((highlight, idx) => (
-                      <li key={idx} className="text-gray-700 text-sm flex items-start">
-                        <span className="mr-2 mt-1.5 w-1.5 h-1.5 bg-blue-600 rounded-full flex-shrink-0"></span>
+                      <li key={idx} className="text-slate-400 text-sm flex items-start">
+                        <span className="mr-2 mt-1.5 w-1.5 h-1.5 bg-cyan-500 rounded-full flex-shrink-0" />
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -102,13 +129,10 @@ const Projects = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-900 mb-2">Technologies:</h4>
+                  <h4 className="text-sm font-semibold text-slate-200 mb-2">Technologies</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-md border border-blue-100"
-                      >
+                      <span key={idx} className="tech-badge">
                         {tech}
                       </span>
                     ))}

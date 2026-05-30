@@ -16,6 +16,11 @@ const Skills = () => {
       icon: '⚙️',
     },
     {
+      category: 'Fintech & Real-time',
+      skills: ['WebSocket', 'FIX Parser', 'Stripe', 'Fintech', 'Socket.IO', 'BullMQ'],
+      icon: '💳',
+    },
+    {
       category: 'Databases',
       skills: ['PostgreSQL', 'MongoDB', 'Mongoose', 'Prisma', 'MSSQL', 'MySQL', 'Redis', 'Kafka'],
       icon: '🗄️',
@@ -27,30 +32,34 @@ const Skills = () => {
     },
     {
       category: 'Tools & Testing',
-      skills: ['Git', 'RSpec', 'Sidekiq', 'BullMQ', 'Swagger'],
+      skills: ['Git', 'RSpec', 'Sidekiq', 'Swagger'],
       icon: '🛠️',
     },
   ];
 
   return (
-    <section id="skills" className="py-16 px-6 bg-gray-50">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="section-title fade-in">Technical Skills</h2>
-        <p className="section-subtitle fade-in">Technologies and tools I work with</p>
+    <section id="skills" className="section-padding bg-slate-900/30">
+      <div className="container-custom">
+        <div className="text-center mb-12 reveal">
+          <h2 className="section-title">Technical Skills</h2>
+          <div className="accent-bar mb-4" />
+          <p className="section-subtitle mb-0">Technologies and tools I work with</p>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {skillCategories.map((category, index) => (
-            <div key={index} className={`bg-white border border-gray-200 rounded-lg p-5 shadow-sm card-hover slide-up stagger-${Math.min(index + 1, 4)}`}>
+            <div
+              key={index}
+              className="glass-card-hover p-5 reveal"
+              style={{ transitionDelay: `${index * 0.06}s` }}
+            >
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-2xl">{category.icon}</span>
-                <h3 className="text-lg font-bold text-gray-900">{category.category}</h3>
+                <h3 className="text-lg font-bold text-slate-100">{category.category}</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-md border border-gray-200"
-                  >
+                  <span key={idx} className="tech-badge">
                     {skill}
                   </span>
                 ))}

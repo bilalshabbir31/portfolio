@@ -43,10 +43,13 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 px-6 bg-gray-50">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="section-title">Contact</h2>
-        <p className="section-subtitle">Let's connect and discuss opportunities</p>
+    <section id="contact" className="section-padding">
+      <div className="container-custom">
+        <div className="text-center mb-12 reveal">
+          <h2 className="section-title">Contact</h2>
+          <div className="accent-bar mb-4" />
+          <p className="section-subtitle mb-0">Let&apos;s connect and discuss opportunities</p>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-4 mb-6">
           {contactInfo.map((info, index) => (
@@ -55,29 +58,29 @@ const Contact = () => {
               href={info.href}
               target={info.href.startsWith('http') ? '_blank' : undefined}
               rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-600 hover:shadow-md transition-all flex items-center gap-3"
+              className="glass-card-hover p-4 flex items-center gap-3 reveal"
+              style={{ transitionDelay: `${index * 0.06}s` }}
             >
-              <div className="text-blue-600">
-                {info.icon}
-              </div>
+              <div className="text-cyan-400">{info.icon}</div>
               <div>
-                <p className="text-sm text-gray-600 mb-0.5">{info.label}</p>
-                <p className="text-gray-900 font-medium">{info.value}</p>
+                <p className="text-sm text-slate-500 mb-0.5">{info.label}</p>
+                <p className="text-slate-200 font-medium">{info.value}</p>
               </div>
             </a>
           ))}
         </div>
 
-        <div className="mt-8 p-6 bg-blue-50 rounded-lg border border-blue-100">
-          <p className="text-gray-700 mb-4">
-            <span className="font-semibold text-gray-900">Currently available in the UAE for immediate joining.</span> Feel free to reach out if you'd like to discuss opportunities or collaborate on projects.
+        <div className="mt-8 p-6 glass-card border-cyan-500/20 reveal">
+          <p className="text-slate-400 mb-4">
+            <span className="font-semibold text-slate-200">Currently available in the UAE for immediate joining.</span>{' '}
+            Feel free to reach out if you&apos;d like to discuss opportunities or collaborate on projects.
           </p>
           <a
             href={`${import.meta.env.BASE_URL}Muhammad_Bilal_CV.pdf`}
             download="Muhammad_Bilal_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+            className="btn-primary inline-flex items-center gap-2"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
