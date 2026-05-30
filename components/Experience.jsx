@@ -33,35 +33,34 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="section-padding bg-slate-900/30">
+    <section id="experience" className="section-padding">
       <div className="container-custom">
-        <div className="text-center mb-12 reveal">
+        <div className="text-center mb-12 reveal-scale">
           <h2 className="section-title">Experience</h2>
           <div className="accent-bar mb-4" />
           <p className="section-subtitle mb-0">Professional software engineering experience</p>
         </div>
 
-        <div className="space-y-10">
+        <div className="space-y-10" data-stagger data-stagger-delay="160">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="glass-card-hover pl-6 pr-6 py-6 border-l-4 border-l-cyan-500 relative overflow-hidden reveal"
-              style={{ transitionDelay: `${index * 0.1}s` }}
+              className="stagger-item surface-card-hover pl-6 pr-6 py-6 border-l-4 border-l-violet-500 relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-500/5 to-transparent rounded-bl-full" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-violet-50 to-transparent rounded-bl-full" />
               <div className="relative z-10">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-slate-100">{exp.position}</h3>
-                  <p className="text-lg text-cyan-400 font-medium">{exp.company}</p>
-                  <p className="text-sm text-slate-500">
+                  <h3 className="text-xl font-bold text-ink">{exp.position}</h3>
+                  <p className="text-lg text-violet-600 font-medium">{exp.company}</p>
+                  <p className="text-sm text-stone-500">
                     {exp.location} • {exp.period}
                   </p>
                 </div>
 
                 <ul className="space-y-2">
                   {exp.achievements.map((achievement, idx) => (
-                    <li key={idx} className="text-slate-400 flex items-start text-sm leading-relaxed">
-                      <span className="mr-2 mt-2 w-1.5 h-1.5 bg-cyan-500 rounded-full flex-shrink-0" />
+                    <li key={idx} className="text-muted flex items-start text-sm leading-relaxed">
+                      <span className="mr-2 mt-2 w-1.5 h-1.5 bg-violet-500 rounded-full flex-shrink-0" />
                       <span>{achievement}</span>
                     </li>
                   ))}

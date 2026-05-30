@@ -90,38 +90,38 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="section-padding">
+    <section id="projects" className="section-padding section-alt">
       <div className="container-custom">
-        <div className="text-center mb-12 reveal">
+        <div className="text-center mb-12 reveal-scale">
           <h2 className="section-title">Projects</h2>
           <div className="accent-bar mb-4" />
           <p className="section-subtitle mb-0">Key projects demonstrating full-stack development expertise</p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-8" data-stagger data-stagger-delay="180">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="glass-card-hover p-6 md:p-8 relative overflow-hidden reveal"
-              style={{ transitionDelay: `${index * 0.08}s` }}
+              className="stagger-item surface-card-hover p-6 md:p-8 relative overflow-hidden"
+              data-stagger-badges="true"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-bl-full" />
+              <div className="absolute top-0 right-0 w-36 h-36 bg-gradient-to-br from-violet-100 to-transparent rounded-bl-full" />
               <div className="relative z-10">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3 gap-2">
-                  <h3 className="text-xl font-bold text-slate-100">{project.title}</h3>
-                  <span className="text-sm text-cyan-400 whitespace-nowrap bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">
+                  <h3 className="text-xl font-bold text-ink">{project.title}</h3>
+                  <span className="text-sm text-violet-700 whitespace-nowrap bg-violet-50 px-3 py-1 rounded-full border border-violet-200 font-medium">
                     {project.period}
                   </span>
                 </div>
 
-                <p className="text-slate-400 mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-muted mb-4 leading-relaxed">{project.description}</p>
 
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-slate-200 mb-2">Key Highlights</h4>
+                  <h4 className="text-sm font-semibold text-ink mb-2">Key Highlights</h4>
                   <ul className="space-y-1.5">
                     {project.highlights.map((highlight, idx) => (
-                      <li key={idx} className="text-slate-400 text-sm flex items-start">
-                        <span className="mr-2 mt-1.5 w-1.5 h-1.5 bg-cyan-500 rounded-full flex-shrink-0" />
+                      <li key={idx} className="text-muted text-sm flex items-start">
+                        <span className="mr-2 mt-1.5 w-1.5 h-1.5 bg-violet-500 rounded-full flex-shrink-0" />
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -129,10 +129,10 @@ const Projects = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-semibold text-slate-200 mb-2">Technologies</h4>
+                  <h4 className="text-sm font-semibold text-ink mb-2">Technologies</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, idx) => (
-                      <span key={idx} className="tech-badge">
+                      <span key={idx} className="tech-badge badge-pop-item">
                         {tech}
                       </span>
                     ))}

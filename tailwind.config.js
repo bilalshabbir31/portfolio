@@ -8,55 +8,36 @@ export default {
   theme: {
     extend: {
       colors: {
-        surface: {
-          DEFAULT: '#0f172a',
-          raised: '#1e293b',
-          overlay: '#334155',
-        },
+        cream: '#FAF8F5',
+        ink: '#1C1917',
+        muted: '#57534E',
       },
       animation: {
-        gradient: 'gradient 8s ease infinite',
-        glow: 'glow 3s ease-in-out infinite alternate',
-        float: 'float 6s ease-in-out infinite',
-        'fade-in': 'fadeIn 0.7s ease-out forwards',
-        'slide-up': 'slideUp 0.7s ease-out forwards',
-        shimmer: 'shimmer 2.5s linear infinite',
+        float: 'float 5s ease-in-out infinite',
+        'float-slow': 'float 7s ease-in-out infinite',
+        glow: 'glow 4s ease-in-out infinite alternate',
         'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
+        shimmer: 'shimmer 3s linear infinite',
       },
       keyframes: {
-        gradient: {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
+        float: {
+          '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+          '50%': { transform: 'translateY(-14px) rotate(3deg)' },
         },
         glow: {
-          '0%': { opacity: '0.4', transform: 'scale(1)' },
-          '100%': { opacity: '0.8', transform: 'scale(1.05)' },
+          '0%': { opacity: '0.5', transform: 'scale(1)' },
+          '100%': { opacity: '0.85', transform: 'scale(1.08)' },
         },
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-18px)' },
-        },
-        fadeIn: {
-          from: { opacity: '0' },
-          to: { opacity: '1' },
-        },
-        slideUp: {
-          from: { opacity: '0', transform: 'translateY(24px)' },
-          to: { opacity: '1', transform: 'translateY(0)' },
+        pulseSoft: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
         },
         shimmer: {
           '0%': { backgroundPosition: '-200% 0' },
           '100%': { backgroundPosition: '200% 0' },
         },
-        pulseSoft: {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.6' },
-        },
-      },
-      backgroundSize: {
-        '300%': '300% 300%',
       },
     },
   },
   plugins: [],
-}
+};

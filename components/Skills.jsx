@@ -38,28 +38,28 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section-padding bg-slate-900/30">
+    <section id="skills" className="section-padding">
       <div className="container-custom">
-        <div className="text-center mb-12 reveal">
+        <div className="text-center mb-12 reveal-flip">
           <h2 className="section-title">Technical Skills</h2>
           <div className="accent-bar mb-4" />
           <p className="section-subtitle mb-0">Technologies and tools I work with</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6" data-stagger data-stagger-delay="120">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="glass-card-hover p-5 reveal"
-              style={{ transitionDelay: `${index * 0.06}s` }}
+              className="stagger-item surface-card-hover p-5"
+              data-stagger-badges="true"
             >
-              <div className="flex items-center gap-2 mb-3">
+              <div className="flex items-center gap-2 mb-4">
                 <span className="text-2xl">{category.icon}</span>
-                <h3 className="text-lg font-bold text-slate-100">{category.category}</h3>
+                <h3 className="text-lg font-bold text-ink">{category.category}</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, idx) => (
-                  <span key={idx} className="tech-badge">
+                  <span key={idx} className="tech-badge badge-pop-item">
                     {skill}
                   </span>
                 ))}

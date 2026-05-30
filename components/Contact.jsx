@@ -43,36 +43,35 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding section-alt">
       <div className="container-custom">
-        <div className="text-center mb-12 reveal">
+        <div className="text-center mb-12 reveal-scale">
           <h2 className="section-title">Contact</h2>
           <div className="accent-bar mb-4" />
           <p className="section-subtitle mb-0">Let&apos;s connect and discuss opportunities</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4 mb-6">
+        <div className="grid md:grid-cols-2 gap-4 mb-6" data-stagger data-stagger-delay="100">
           {contactInfo.map((info, index) => (
             <a
               key={index}
               href={info.href}
               target={info.href.startsWith('http') ? '_blank' : undefined}
               rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="glass-card-hover p-4 flex items-center gap-3 reveal"
-              style={{ transitionDelay: `${index * 0.06}s` }}
+              className="stagger-item surface-card-hover p-4 flex items-center gap-3"
             >
-              <div className="text-cyan-400">{info.icon}</div>
+              <div className="text-violet-600">{info.icon}</div>
               <div>
-                <p className="text-sm text-slate-500 mb-0.5">{info.label}</p>
-                <p className="text-slate-200 font-medium">{info.value}</p>
+                <p className="text-sm text-stone-500 mb-0.5">{info.label}</p>
+                <p className="text-ink font-medium">{info.value}</p>
               </div>
             </a>
           ))}
         </div>
 
-        <div className="mt-8 p-6 glass-card border-cyan-500/20 reveal">
-          <p className="text-slate-400 mb-4">
-            <span className="font-semibold text-slate-200">Currently available in the UAE for immediate joining.</span>{' '}
+        <div className="mt-8 p-6 surface-card border-violet-200 reveal-flip">
+          <p className="text-muted mb-4">
+            <span className="font-semibold text-ink">Currently available in the UAE for immediate joining.</span>{' '}
             Feel free to reach out if you&apos;d like to discuss opportunities or collaborate on projects.
           </p>
           <a

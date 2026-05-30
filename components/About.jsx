@@ -27,32 +27,32 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding">
+    <section id="about" className="section-padding section-alt">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12 reveal">
+        <div className="text-center mb-12 reveal-scale">
           <h2 className="section-title">About Me</h2>
           <div className="accent-bar mb-4" />
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-6">
-            <div className="reveal">
+            <div className="reveal-left">
               <h3 className="text-2xl font-bold gradient-text mb-4">Crafting Digital Excellence</h3>
-              <div className="border-l-4 border-cyan-500 pl-4 mb-6">
-                <p className="text-slate-400 leading-relaxed">
+              <div className="border-l-4 border-violet-400 pl-4 mb-6">
+                <p className="text-muted leading-relaxed">
                   A passionate Full Stack Developer with over 3 years of experience building scalable, high-performance web applications that drive business results. Currently based in Dubai, UAE, specializing in modern web technologies, fintech systems, and cloud solutions.
                 </p>
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-4" data-stagger data-stagger-delay="100">
               {features.map((feature, index) => (
-                <div key={index} className="glass-card-hover p-5 reveal" style={{ transitionDelay: `${index * 0.08}s` }}>
+                <div key={index} className="stagger-item surface-card-hover p-5">
                   <div className="flex items-start gap-4">
                     <div className="text-4xl">{feature.icon}</div>
                     <div>
-                      <h4 className="text-lg font-bold text-slate-100 mb-2">{feature.title}</h4>
-                      <p className="text-slate-400 text-sm leading-relaxed">{feature.description}</p>
+                      <h4 className="text-lg font-bold text-ink mb-2">{feature.title}</h4>
+                      <p className="text-muted text-sm leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
                 </div>
@@ -60,16 +60,12 @@ const About = () => {
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6" data-stagger data-stagger-delay="150">
             {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="glass-card-hover p-6 text-center reveal"
-                style={{ transitionDelay: `${index * 0.1}s` }}
-              >
+              <div key={index} className="stagger-item surface-card-hover p-6 text-center">
                 <div className="text-4xl mb-3">{stat.icon}</div>
                 <div className="text-4xl font-bold gradient-text mb-2">{stat.value}</div>
-                <div className="text-slate-400 text-sm font-medium">{stat.label}</div>
+                <div className="text-muted text-sm font-medium">{stat.label}</div>
               </div>
             ))}
           </div>

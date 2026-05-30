@@ -23,7 +23,7 @@ const Header = () => {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/80 shadow-lg shadow-black/20'
+          ? 'bg-white/90 backdrop-blur-xl border-b border-stone-200 shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -37,16 +37,16 @@ const Header = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-slate-400 hover:text-cyan-400 transition-colors text-sm font-medium relative group"
+              className="text-stone-600 hover:text-violet-600 transition-colors text-sm font-medium relative group"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 transition-all group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-rose-400 transition-all group-hover:w-full" />
             </a>
           ))}
         </nav>
 
         <button
-          className="md:hidden text-slate-300 hover:text-cyan-400 transition-colors"
+          className="md:hidden text-stone-600 hover:text-violet-600 transition-colors"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -60,13 +60,13 @@ const Header = () => {
         </button>
 
         {isMenuOpen && (
-          <div className="absolute top-full left-0 w-full glass-card md:hidden border-t-0 rounded-none">
+          <div className="absolute top-full left-0 w-full surface-card md:hidden rounded-none border-t-0">
             <nav className="flex flex-col py-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="px-6 py-3 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 transition-colors"
+                  className="px-6 py-3 text-stone-600 hover:text-violet-600 hover:bg-violet-50 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
